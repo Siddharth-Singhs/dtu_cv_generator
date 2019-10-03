@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name" translatable="false">Resume Builder</string>
+
+    <string name="save">Save</string>
+
+    /*
+    Basic Detail
+    */
+    <string name="name_required">Enter the Name</string>
+    <string name="roll_no_required">Enter the Roll No.</string>
+    <string name="save_detail">Details are Saved</string>
+    // Keys
+    <string name="name_key">Name</string>
+    <string name="roll_no_key">Roll No</string>
+    <string name="email_key">Email</string>
+    <string name="phone_key">Phone</string>
+    <string name="website_key">Website</string>
+
+
+    /*
+    Education Details
+    */
+
+    // Constant String
+    <string name="undergrad">Undergrad Education Detail</string>
+    <string name="institute_text">Institute</string>
+    <string name="course_text">Course</string>
+    <string name="year">Year</string>
+    <string name="class_12">Class XII</string>
+    <string name="class_10">Class X</string>
+    <string name="board">Board</string>
+    <string name="cgpa_precent">CGPA/Percentage</string>
+    <string name="school">School</string>
+
+
+    // Hint Text
+    <string name="college_course_hint">B.Tech - Computer Engineering</string>
+    <string name="college_hint">Delhi Technological University</string>
+    <string name="college_year_hint">2016-present</string>
+    <string name="college_cgpa_hint">8.25(CGPA Till IV Semester)</string>
+
+    <string name="school_board_hint">Class XII(CBSE)</string>
+    <string name="school_name_hint">DPS Ghaziabad</string>
+    <string name="school_year_12">2016</string>
+    <string name="school_percent_12_hint">91.2%</string>
+
+    <string name="school_board_10_hint">Class X(CBSE)</string>
+    <string name="school_year_10">2014</string>
+    <string name="school_cgpa">7.5</string>
+
+    //Key
+    <string name="college_course_key">College Course</string>
+    <string name="college_year_key">College Year</string>
+    <string name="college_name_key">College Name</string>
+    <string name="college_cgpa_key">College CGPA</string>
+
+    <string name="class_12_board_key">Class 12 Board</string>
+    <string name="class_12_year_key">Class 12 Year</string>
+    <string name="class_12_name_key">Class 12 Name</string>
+    <string name="class_12_cgpa_key">Class 12 CGPA</string>
+
+    <string name="class_10_board_key">Class 10 Board</string>
+    <string name="class_10_year_key">Class 10 Year</string>
+    <string name="class_10_name_key">Class 10 Name</string>
+    <string name="class_10_cgpa_key">Class 10 CGPA</string>
+
+
+</resources>

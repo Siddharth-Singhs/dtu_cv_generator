@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.dtu_resume.ResumeElement.BasicDetail">
+
+    <TextView
+        android:id="@+id/basic_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Basic Details"
+        android:layout_marginLeft="10dp"
+        android:textSize="25sp"
+        android:layout_marginBottom="10dp"/>
+    <ImageView
+        android:id="@+id/clear_view"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/cross"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentEnd="true"
+        />
+    <TextView
+        android:id="@+id/name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:layout_marginLeft="10dp"
+        android:textSize="15sp"
+        android:layout_below="@+id/basic_text_view"/>
+
+    <EditText
+        android:id="@+id/edit_name_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name_text_view"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Your Name"
+        android:padding="3dp"
+        android:textAlignment="textStart"
+        android:background="@drawable/round_border"/>
+
+    <TextView
+        android:id="@+id/roll_no_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Roll No"
+        android:layout_marginLeft="10dp"
+        android:textSize="15sp"
+        android:layout_below="@+id/edit_name_view"/>
+
+    <EditText
+        android:id="@+id/edit_roll_no_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/roll_no_text_view"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Your Roll No"
+        android:padding="3dp"
+        android:textAlignment="textStart"
+        android:background="@drawable/round_border"/>
+
+    <TextView
+        android:id="@+id/email_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:layout_marginLeft="10dp"
+        android:textSize="15sp"
+        android:layout_below="@+id/edit_roll_no_view"/>
+
+    <EditText
+        android:id="@+id/edit_email_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email_text_view"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="3dp"
+        android:hint="myresume@gmail.com"
+        android:textAlignment="textStart"
+        android:background="@drawable/round_border"/>
+
+    <TextView
+        android:id="@+id/phone_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Phone"
+        android:layout_marginLeft="10dp"
+        android:textSize="15sp"
+        android:layout_below="@+id/edit_email_view"/>
+
+    <EditText
+        android:id="@+id/edit_phone_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phone_text_view"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="8933990864"
+        android:padding="3dp"
+        android:background="@drawable/round_border"/>
+
+    <TextView
+        android:id="@+id/website_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Website"
+        android:layout_marginLeft="10dp"
+        android:textSize="15sp"
+        android:layout_below="@+id/edit_phone_view"/>
+
+    <EditText
+        android:id="@+id/edit_website_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/website_text_view"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="mywebsite@domain.com"
+        android:padding="3dp"
+        android:background="@drawable/round_border"/>
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@color/colorPrimary"
+        android:text="Save"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/edit_website_view"/>
+
+
+
+</RelativeLayout>
