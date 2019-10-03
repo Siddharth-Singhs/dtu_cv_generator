@@ -63,6 +63,29 @@
     <string name="class_10_year_key">Class 10 Year</string>
     <string name="class_10_name_key">Class 10 Name</string>
     <string name="class_10_cgpa_key">Class 10 CGPA</string>
+    
+    
+    
+    /*
+    Internships
+    */
+    
+    // Constant String 
+    <string name="experience">Experience</string>
+    
+    <string name="organization">Organization</string>
+    <string name="designation">Designation</string>
+    <string name="date">Date</string>
+    <string name="role">Role</string>
+
+
+    // Hint String
+
+    <string name="organization_hint">MICROSOFT</string>
+    <string name="designation_hint">SOFTWARE ENGINEER INTERN</string>
+    <string name="date_hint">May - July 2019</string>
+    <string name="role_hint">Successfully developed complete Backup and Restore solutionsfor Open-source Databases(PostgreSQL, MariaDB)</string>
+
 
 
 </resources>

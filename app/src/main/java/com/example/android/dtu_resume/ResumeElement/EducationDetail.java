@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.android.dtu_resume.R;
 
@@ -38,10 +39,11 @@ public class EducationDetail extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_education_detail);
 
+        saveButton=(Button)findViewById(R.id.save_button);
         // College View Initialise
-        collegeCourseView=(EditText) findViewById(R.id.edit_course_view);
+        collegeCourseView=(EditText)findViewById(R.id.edit_course_view);
         collegeYearView=(EditText)findViewById(R.id.edit_year_view);
-        collegeNameView=(EditText)findViewById(R.id.edit_name_view);
+        collegeNameView=(EditText)findViewById(R.id.edit_college_view);
         collegeCGPAView=(EditText)findViewById(R.id.edit_college_cpga_view);
         // Class 12 View Initialise
         class12BoardView=(EditText)findViewById(R.id.edit_board_12_view);
@@ -54,7 +56,7 @@ public class EducationDetail extends AppCompatActivity {
         class10NameView=(EditText)findViewById(R.id.edit_school_10_view);
         class10CGPAView=(EditText)findViewById(R.id.edit_school_10_percent_view);
 
-        saveButton=(Button)findViewById(R.id.save_button);
+
         mPreferences= PreferenceManager.getDefaultSharedPreferences(this);
         mEditor=mPreferences.edit();
 
@@ -86,70 +88,46 @@ public class EducationDetail extends AppCompatActivity {
         String class10CGPA=class10CGPAView.getText().toString().trim();
 
         // Setting the college value
-        if (!(TextUtils.isEmpty(collegeCourse)))
-        {
-            mEditor.putString(getString(R.string.college_course_key),collegeCourse);
-            mEditor.commit();
-        }
-        if(!(TextUtils.isEmpty(collegeYear)))
-        {
-            mEditor.putString(getString(R.string.college_year_key),collegeYear);
-            mEditor.commit();
-        }
-        if(!(TextUtils.isEmpty(collegeName)))
-        {
-            mEditor.putString(getString(R.string.college_name_key),collegeName);
-            mEditor.commit();
-        }
-        if(!(TextUtils.isEmpty(collegeCGPA)))
-        {
-            mEditor.putString(getString(R.string.college_cgpa_key),collegeCGPA);
-            mEditor.commit();
-        }
+        mEditor.putString(getString(R.string.college_course_key),collegeCourse);
+        mEditor.commit();
+
+        mEditor.putString(getString(R.string.college_year_key),collegeYear);
+        mEditor.commit();
+
+        mEditor.putString(getString(R.string.college_name_key),collegeName);
+        mEditor.commit();
+
+        mEditor.putString(getString(R.string.college_cgpa_key),collegeCGPA);
+        mEditor.commit();
+
 
         // Setting the class 12 Value
-        if(!(TextUtils.isEmpty(class12Board)))
-        {
-            mEditor.putString(getString(R.string.class_12_board_key),class12Board);
-            mEditor.commit();
-        }
-        if(!(TextUtils.isEmpty(class12Year)))
-        {
-            mEditor.putString(getString(R.string.class_12_year_key),class12Year);
-            mEditor.commit();
-        }
-        if(!(TextUtils.isEmpty(class12Name)))
-        {
-            mEditor.putString(getString(R.string.class_12_name_key),class12Name);
-            mEditor.commit();
-        }
-        if(!(TextUtils.isEmpty(class12CGPA)))
-        {
-            mEditor.putString(getString(R.string.class_12_cgpa_key),class12CGPA);
-            mEditor.commit();
-        }
+        mEditor.putString(getString(R.string.class_12_board_key),class12Board);
+        mEditor.commit();
+        
+        mEditor.putString(getString(R.string.class_12_year_key),class12Year);
+        mEditor.commit();
+
+        mEditor.putString(getString(R.string.class_12_name_key),class12Name);
+        mEditor.commit();
+
+        mEditor.putString(getString(R.string.class_12_cgpa_key),class12CGPA);
+        mEditor.commit();
 
         // Setting the Class 10 Value
-        if(!(TextUtils.isEmpty(class10Board)))
-        {
-            mEditor.putString(getString(R.string.class_10_board_key),class10Board);
-            mEditor.commit();
-        }
-        if(!(TextUtils.isEmpty(class10Year)))
-        {
-            mEditor.putString(getString(R.string.class_10_year_key),class10Year);
-            mEditor.commit();
-        }
-        if(!(TextUtils.isEmpty(class10Name)))
-        {
-            mEditor.putString(getString(R.string.class_10_name_key),class10Name);
-            mEditor.commit();
-        }
-        if(!(TextUtils.isEmpty(class10CGPA)))
-        {
-            mEditor.putString(getString(R.string.class_10_cgpa_key),class10CGPA);
-            mEditor.commit();
-        }
+        mEditor.putString(getString(R.string.class_10_board_key),class10Board);
+        mEditor.commit();
+
+        mEditor.putString(getString(R.string.class_10_year_key),class10Year);
+        mEditor.commit();
+
+        mEditor.putString(getString(R.string.class_10_name_key),class10Name);
+        mEditor.commit();
+
+        mEditor.putString(getString(R.string.class_10_cgpa_key),class10CGPA);
+        mEditor.commit();
+
+        Toast.makeText(this,R.string.save_detail,Toast.LENGTH_SHORT).show();
 
     }
 
@@ -157,20 +135,20 @@ public class EducationDetail extends AppCompatActivity {
 
     private void checkSharedPreference()
     {
-        String collegeCourse=mPreferences.getString(getString(R.string.name_key),"");
-        String collegeYear=mPreferences.getString(getString(R.string.roll_no_key),"");
-        String collegeName=mPreferences.getString(getString(R.string.roll_no_key),"");
-        String collegeCGPA=mPreferences.getString(getString(R.string.roll_no_key),"");
+        String collegeCourse=mPreferences.getString(getString(R.string.college_course_key),"");
+        String collegeYear=mPreferences.getString(getString(R.string.college_year_key),"");
+        String collegeName=mPreferences.getString(getString(R.string.college_name_key),"");
+        String collegeCGPA=mPreferences.getString(getString(R.string.college_cgpa_key),"");
 
-        String class12Board=mPreferences.getString(getString(R.string.name_key),"");
-        String class12Year=mPreferences.getString(getString(R.string.roll_no_key),"");
-        String class12Name=mPreferences.getString(getString(R.string.roll_no_key),"");
-        String class12CGPA=mPreferences.getString(getString(R.string.roll_no_key),"");
+        String class12Board=mPreferences.getString(getString(R.string.class_12_board_key),"");
+        String class12Year=mPreferences.getString(getString(R.string.class_12_year_key),"");
+        String class12Name=mPreferences.getString(getString(R.string.class_12_name_key),"");
+        String class12CGPA=mPreferences.getString(getString(R.string.class_12_cgpa_key),"");
 
-        String class10Board=mPreferences.getString(getString(R.string.name_key),"");
-        String class10Year=mPreferences.getString(getString(R.string.roll_no_key),"");
-        String class10Name=mPreferences.getString(getString(R.string.roll_no_key),"");
-        String class10CGPA=mPreferences.getString(getString(R.string.roll_no_key),"");
+        String class10Board=mPreferences.getString(getString(R.string.class_10_board_key),"");
+        String class10Year=mPreferences.getString(getString(R.string.class_10_year_key),"");
+        String class10Name=mPreferences.getString(getString(R.string.class_10_name_key),"");
+        String class10CGPA=mPreferences.getString(getString(R.string.class_10_cgpa_key),"");
 
         // Setting the college value
         if(collegeCourse.length() > 0)
