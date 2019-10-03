@@ -8,11 +8,13 @@ import android.view.View;
 
 import com.example.android.dtu_resume.ResumeElement.BasicDetail;
 import com.example.android.dtu_resume.ResumeElement.EducationDetail;
+import com.example.android.dtu_resume.ResumeElement.InternshipDetail;
 
 public class CreateResume extends AppCompatActivity {
 
     private CardView basicDetail;
     private CardView educationDetail;
+    private CardView internshipDetail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,13 @@ public class CreateResume extends AppCompatActivity {
             }
         });
 
+        internshipDetail=(CardView)findViewById(R.id.experience_detail_card);
+        internshipDetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), InternshipDetail.class));
+            }
+        });
 
 
     }
