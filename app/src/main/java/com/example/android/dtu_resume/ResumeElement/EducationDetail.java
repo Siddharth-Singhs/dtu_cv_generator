@@ -104,7 +104,7 @@ public class EducationDetail extends AppCompatActivity {
         // Setting the class 12 Value
         mEditor.putString(getString(R.string.class_12_board_key),class12Board);
         mEditor.commit();
-        
+
         mEditor.putString(getString(R.string.class_12_year_key),class12Year);
         mEditor.commit();
 

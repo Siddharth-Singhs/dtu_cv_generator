@@ -7,100 +7,46 @@
     android:layout_height="match_parent"
     tools:context="com.example.android.dtu_resume.ResumeElement.InternshipDetail">
 
-    <TextView
-        android:id="@+id/experience_view"
+    <LinearLayout
+        android:id="@+id/basic_detail_layout"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="@color/dot_light_screen3"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:padding="10dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/add"
+            android:textColor="@android:color/white" />
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:padding="10dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/save"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/experience_list_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/experience"
-        android:textSize="25sp"
-        android:padding="10dp"/>
+        android:orientation="vertical"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:descendantFocusability="beforeDescendants"
+        android:layout_below="@id/basic_detail_layout">
+    </ListView>
 
-    <TextView
-        android:id="@+id/organisation_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/organization"
-        android:layout_marginStart="10dp"
-        android:textSize="15sp"
-        android:layout_below="@+id/experience_view"/>
-
-    <EditText
-        android:id="@+id/edit_organisation_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/organisation_text_view"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:hint="@string/organization_hint"
-        android:padding="3dp"
-        android:textAlignment="textStart"
-        android:background="@drawable/round_border"/>
-
-    <TextView
-        android:id="@+id/designation_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/designation"
-        android:layout_marginStart="10dp"
-        android:textSize="15sp"
-        android:layout_below="@+id/edit_organisation_view"/>
-
-    <EditText
-        android:id="@+id/edit_designation_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/designation_text_view"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:hint="@string/designation_hint"
-        android:padding="3dp"
-        android:textAlignment="textStart"
-        android:background="@drawable/round_border"/>
-
-    <TextView
-        android:id="@+id/date_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/date"
-        android:layout_marginStart="10dp"
-        android:textSize="15sp"
-        android:layout_below="@+id/edit_designation_view"/>
-
-    <EditText
-        android:id="@+id/edit_date_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/date_text_view"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:hint="@string/date_hint"
-        android:padding="3dp"
-        android:textAlignment="textStart"
-        android:background="@drawable/round_border"/>
-
-    <TextView
-        android:id="@+id/role_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/role"
-        android:layout_marginStart="10dp"
-        android:textSize="15sp"
-        android:layout_below="@+id/edit_date_view"/>
-
-    <EditText
-        android:id="@+id/edit_role_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/role_text_view"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:hint="@string/role_hint"
-        android:padding="3dp"
-        android:textAlignment="textStart"
-        android:background="@drawable/round_border"/>
 
 </RelativeLayout>
+

@@ -19,7 +19,9 @@
         <activity android:name=".CreateResume" />
         <activity android:name=".ResumeElement.BasicDetail" />
         <activity android:name=".ResumeElement.EducationDetail" />
-        <activity android:name=".ResumeElement.InternshipDetail"></activity>
+        <activity android:name=".ResumeElement.InternshipDetail"
+            android:windowSoftInputMode="adjustPan"
+        />
     </application>
 
 </manifest>

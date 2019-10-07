@@ -2,6 +2,7 @@
     <string name="app_name" translatable="false">Resume Builder</string>
 
     <string name="save">Save</string>
+    <string name="add">Add</string>
 
     /*
     Basic Detail
@@ -79,12 +80,16 @@
     <string name="role">Role</string>
 
 
+
     // Hint String
 
     <string name="organization_hint">MICROSOFT</string>
     <string name="designation_hint">SOFTWARE ENGINEER INTERN</string>
     <string name="date_hint">May - July 2019</string>
     <string name="role_hint">Successfully developed complete Backup and Restore solutionsfor Open-source Databases(PostgreSQL, MariaDB)</string>
+
+    // Key
+    <string name="internship_key">Internship</string>
 
 
 
