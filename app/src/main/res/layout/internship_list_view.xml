@@ -100,7 +100,7 @@
         android:layout_marginBottom="10dp"
         android:hint="@string/role_hint"
         android:padding="3dp"
-        android:textAlignment="textStart"
+        android:gravity="top|left"
         android:background="@drawable/round_border"/>
 
 </RelativeLayout>

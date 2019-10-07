@@ -6,7 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.android.dtu_resume.Holder.InternshipInformation;
 import com.example.android.dtu_resume.Model.ExperienceAdapter;
@@ -23,6 +25,7 @@ public class InternshipDetail extends AppCompatActivity {
 
     private Button addButton;
     private Button saveButton;
+    private ImageView clearImageView;
 
     private SharedPreferences mPreferences;
     private SharedPreferences.Editor mEditor;
@@ -36,6 +39,7 @@ public class InternshipDetail extends AppCompatActivity {
         internshipInformationList=new ArrayList<>();
         addButton=(Button)findViewById(R.id.add_button);
         saveButton=(Button)findViewById(R.id.save_button);
+        clearImageView=(ImageView) findViewById(R.id.clear_view);
 
         mPreferences= PreferenceManager.getDefaultSharedPreferences(this);
         mEditor=mPreferences.edit();
@@ -46,6 +50,7 @@ public class InternshipDetail extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 saveInternDetail();
+
             }
         });
 
@@ -56,7 +61,31 @@ public class InternshipDetail extends AppCompatActivity {
             }
         });
 
+        clearImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clearExperience();
+            }
+        });
+
+
     }
+    public void clearExperience()
+    {
+        int currentSize=internshipInformationList.size();
+        if(currentSize > 0)
+        {
+            internshipInformationList.remove(currentSize-1);
+            String key=getString(R.string.internship_key)+ (currentSize-1);
+            mEditor.remove(key);
+            mEditor.apply();
+            experienceAdapter =new ExperienceAdapter(InternshipDetail.this,internshipInformationList);
+            experienceListView.setAdapter(experienceAdapter);
+
+        }
+        Toast.makeText(this,"Clearing the Experience",Toast.LENGTH_SHORT).show();
+    }
+
 
     private void checkSharedPreference() {
         int size=mPreferences.getAll().size();
@@ -89,6 +118,7 @@ public class InternshipDetail extends AppCompatActivity {
             mEditor.commit();
 
         }
+        Toast.makeText(this,R.string.save_detail,Toast.LENGTH_SHORT).show();
     }
     private void addInternDetail()
     {
@@ -103,6 +133,10 @@ public class InternshipDetail extends AppCompatActivity {
             if(organisation.length() >0 && designation.length() > 0 && date.length() > 0 && role.length() > 0)
             {
                 creatingNewElement();
+            }
+            else
+            {
+                Toast.makeText(this,"First fill the detail",Toast.LENGTH_SHORT).show();
             }
         }
         else
