@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/achievement_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/achievement_award"
+        android:textSize="25sp"
+        android:padding="10dp"/>
+
+
+    <EditText
+        android:id="@+id/edit_achievement_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/achievement_view"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/achievement_hint_award"
+        android:padding="3dp"
+        android:textAlignment="textStart"
+        android:background="@drawable/round_border"/>
+
+</RelativeLayout>

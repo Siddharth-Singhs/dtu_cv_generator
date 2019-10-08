@@ -64,21 +64,19 @@
     <string name="class_10_year_key">Class 10 Year</string>
     <string name="class_10_name_key">Class 10 Name</string>
     <string name="class_10_cgpa_key">Class 10 CGPA</string>
-    
-    
-    
+
+
     /*
     Internships
     */
-    
-    // Constant String 
+
+    // Constant String
     <string name="experience">Experience</string>
-    
+
     <string name="organization">Organization</string>
     <string name="designation">Designation</string>
     <string name="date">Date</string>
     <string name="role">Role</string>
-
 
 
     // Hint String
@@ -86,11 +84,42 @@
     <string name="organization_hint">MICROSOFT</string>
     <string name="designation_hint">SOFTWARE ENGINEER INTERN</string>
     <string name="date_hint">May - July 2019</string>
-    <string name="role_hint">Successfully developed complete Backup and Restore solutionsfor Open-source Databases(PostgreSQL, MariaDB)</string>
+    <string name="role_hint">Successfully developed complete Backup and Restore solutions for Open-source Databases(PostgreSQL, MariaDB)</string>
 
     // Key
     <string name="internship_key">Internship</string>
 
+    /*
+    Project
+    */
 
+    // Constant String
+    <string name="project">Project</string>
+
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+
+    // Hint String
+    <string name="title_hint">Gram Panchayat Adoption Advisor</string>
+    <string name="description_hint">->Analyzed tabular and geospatial data from Indian Space Research Organization to develop different metrics for ranking individual villages of
+        the country.->Used KMeans clustering method to discover villages which share similar set of problems.->Developed an android application to allow regular citizens of the country
+        to adopt villages and work on their improvement.</string>
+
+    //Key
+    <string name="project_key">Project</string>
+
+    /*
+    Achievement and Award
+    */
+
+    // constant string
+    <string name="achievement_award">Achievement &amp; Awards</string>
+
+    // Hint String
+    <string name="achievement_hint_award">National Runner Up Award for Best Visualizations EXL EQ 2019 : A data analytic-cum-case study
+    competition organized by EXL Analytics in which student from top 20 universities(IITs,NITs,BIT,NSIT,DTU) across India participated.</string>
+
+    //Key
+    <string name="achievement_award_key">Achievement</string>
 
 </resources>
