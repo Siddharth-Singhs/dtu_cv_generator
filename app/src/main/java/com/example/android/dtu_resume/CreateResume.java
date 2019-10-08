@@ -9,12 +9,14 @@ import android.view.View;
 import com.example.android.dtu_resume.ResumeElement.BasicDetail;
 import com.example.android.dtu_resume.ResumeElement.EducationDetail;
 import com.example.android.dtu_resume.ResumeElement.InternshipDetail;
+import com.example.android.dtu_resume.ResumeElement.ProjectDetail;
 
 public class CreateResume extends AppCompatActivity {
 
     private CardView basicDetail;
     private CardView educationDetail;
     private CardView internshipDetail;
+    private CardView projectDetail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,13 @@ public class CreateResume extends AppCompatActivity {
             }
         });
 
+        projectDetail=(CardView) findViewById(R.id.project_detail_card);
+        projectDetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), ProjectDetail.class));
+            }
+        });
 
     }
 }
