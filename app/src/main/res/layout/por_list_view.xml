@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/por_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/position_of_responsibility"
+        android:textSize="25sp"
+        android:padding="10dp"/>
+
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:layout_marginStart="10dp"
+        android:textSize="15sp"
+        android:layout_below="@+id/por_view"/>
+
+    <EditText
+        android:id="@+id/edit_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_text_view"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/por_title_hint"
+        android:padding="3dp"
+        android:gravity="top|left"
+        android:background="@drawable/round_border"/>
+
+    <TextView
+        android:id="@+id/description_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        android:layout_marginStart="10dp"
+        android:textSize="15sp"
+        android:layout_below="@+id/edit_title_view"/>
+
+    <EditText
+        android:id="@+id/edit_description_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/description_text_view"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/por_description_hint"
+        android:padding="3dp"
+        android:gravity="top|left"
+        android:background="@drawable/round_border"/>
+
+
+
+</RelativeLayout>

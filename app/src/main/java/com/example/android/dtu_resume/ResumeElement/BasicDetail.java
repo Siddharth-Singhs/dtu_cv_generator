@@ -17,7 +17,6 @@ import com.example.android.dtu_resume.R;
 
 public class BasicDetail extends AppCompatActivity {
 
-    private ImageView clearView;
     private EditText nameView;
     private EditText rollNoView;
     private EditText emailView;
@@ -34,7 +33,6 @@ public class BasicDetail extends AppCompatActivity {
         setContentView(R.layout.activity_basic_detail);
 
         // Initialising the view
-        clearView=(ImageView) findViewById(R.id.clear_view);
         nameView=(EditText)findViewById(R.id.edit_name_view);
         rollNoView=(EditText)findViewById(R.id.edit_roll_no_view);
         emailView=(EditText)findViewById(R.id.edit_email_view);
@@ -48,12 +46,6 @@ public class BasicDetail extends AppCompatActivity {
         checkSharedPreference();
 
 
-        clearView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-               clearSharedPreference();
-            }
-        });
 
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,16 +57,6 @@ public class BasicDetail extends AppCompatActivity {
 
     }
 
-    private void clearSharedPreference()
-    {
-        mPreferences.edit().clear().commit();
-        nameView.getText().clear();
-        rollNoView.getText().clear();
-        emailView.getText().clear();
-        phoneNoView.getText().clear();
-        websiteView.getText().clear();
-
-    }
 
 
     private void checkSharedPreference()

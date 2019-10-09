@@ -5,23 +5,23 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/achievement_view"
+        android:id="@+id/extra_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/achievement_award"
+        android:text="@string/extra_curricular"
         android:textSize="25sp"
         android:padding="10dp"/>
 
 
     <EditText
-        android:id="@+id/edit_achievement_view"
+        android:id="@+id/edit_extra_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/achievement_view"
+        android:layout_below="@+id/extra_view"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
-        android:hint="@string/achievement_hint_award"
+        android:hint="@string/extra_curricular_hint"
         android:padding="3dp"
         android:gravity="top|left"
         android:background="@drawable/round_border"/>
