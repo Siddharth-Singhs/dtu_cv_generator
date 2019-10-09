@@ -25,7 +25,12 @@
         <activity
             android:name=".ResumeElement.ProjectDetail"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".ResumeElement.AchievementDetail"></activity>
+        <activity android:name=".ResumeElement.AchievementDetail" />
+        <activity
+            android:name=".ResumeElement.PorDetail"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".ResumeElement.ExtraCurricularDetail" />
+        <activity android:name=".ResumeElement.OtherInformationDetail"></activity>
     </application>
 
 </manifest>

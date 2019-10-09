@@ -318,6 +318,7 @@ android:id="@+id/detail_resume_main_layout">
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_below="@+id/extra_other_detail_layout">
     <Button
         android:id="@+id/save_button"

@@ -11,19 +11,19 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.android.dtu_resume.Holder.AchievementInformation;
-import com.example.android.dtu_resume.Holder.ProjectInformation;
+import com.example.android.dtu_resume.Holder.OtherInformation;
 import com.example.android.dtu_resume.Model.AchievementAdapter;
-import com.example.android.dtu_resume.Model.ProjectAdapter;
+import com.example.android.dtu_resume.Model.OtherInformationAdapter;
 import com.example.android.dtu_resume.R;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
-public class AchievementDetail extends AppCompatActivity {
+public class OtherInformationDetail extends AppCompatActivity {
 
-    private ListView achievementListView;
-    private AchievementAdapter achievementAdapter;
-    private ArrayList<AchievementInformation> achievementInformationList;
+    private ListView otherListView;
+    private OtherInformationAdapter otherInformationAdapter;
+    private ArrayList<OtherInformation> otherInformationArrayList;
 
     private Button addButton;
     private Button saveButton;
@@ -35,11 +35,10 @@ public class AchievementDetail extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_achievement_detail);
+        setContentView(R.layout.activity_other_information_detail);
 
-
-        achievementListView=(ListView)findViewById(R.id.achievement_list_view);
-        achievementInformationList=new ArrayList<>();
+        otherListView=(ListView)findViewById(R.id.other_list_view);
+        otherInformationArrayList=new ArrayList<>();
         addButton=(Button)findViewById(R.id.add_button);
         saveButton=(Button)findViewById(R.id.save_button);
         clearImageView=(ImageView)findViewById(R.id.clear_view);
@@ -52,32 +51,31 @@ public class AchievementDetail extends AppCompatActivity {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                saveAchievementDetail();
+                saveOtherDetail();
             }
         });
 
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addAchievementDetail();
+                addOtherDetail();
             }
         });
 
         clearImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                clearAchievementDetail();
+                clearOtherDetail();
             }
         });
     }
-
-    private void saveAchievementDetail() {
-        for(int position=0;position<achievementInformationList.size();position++)
+    private void saveOtherDetail() {
+        for(int position=0;position<otherInformationArrayList.size();position++)
         {
-            AchievementInformation currentInformation = achievementInformationList.get(position);
+            OtherInformation currentInformation = otherInformationArrayList.get(position);
             Gson gson = new Gson();
             String json = gson.toJson(currentInformation);
-            String key=getString(R.string.achievement_award_key)+position;
+            String key=getString(R.string.other_information_key)+position;
             mEditor.putString(key,json);
             mEditor.commit();
         }
@@ -90,46 +88,46 @@ public class AchievementDetail extends AppCompatActivity {
         while(start< size)
         {
             Gson gson = new Gson();
-            String key=getString(R.string.achievement_award_key)+start;
-            String achievement_str=mPreferences.getString(key,"");
-            AchievementInformation achievementInformation=gson.fromJson(achievement_str, AchievementInformation.class);
-            if(achievementInformation!=null) {
-                achievementInformationList.add(achievementInformation);
+            String key=getString(R.string.other_information_key)+start;
+            String other_str=mPreferences.getString(key,"");
+            OtherInformation otherInformation=gson.fromJson(other_str, OtherInformation.class);
+            if(otherInformation!=null) {
+                otherInformationArrayList.add(otherInformation);
             }
             start++;
         }
-        if(achievementInformationList.size()>0) {
-            achievementAdapter =new AchievementAdapter(AchievementDetail.this,achievementInformationList);
-            achievementListView.setAdapter(achievementAdapter);
+        if(otherInformationArrayList.size()>0) {
+            otherInformationAdapter =new OtherInformationAdapter(OtherInformationDetail.this,otherInformationArrayList);
+            otherListView.setAdapter(otherInformationAdapter);
 
         }
     }
 
-    private void clearAchievementDetail()
+    private void clearOtherDetail()
     {
-        int currentSize=achievementInformationList.size();
+        int currentSize=otherInformationArrayList.size();
         if(currentSize > 0)
         {
-            achievementInformationList.remove(currentSize-1);
-            String key=getString(R.string.achievement_award_key)+ (currentSize-1);
+            otherInformationArrayList.remove(currentSize-1);
+            String key=getString(R.string.other_information_key)+ (currentSize-1);
             mEditor.remove(key);
             mEditor.apply();
-            achievementAdapter =new AchievementAdapter(AchievementDetail.this,achievementInformationList);
-            achievementListView.setAdapter(achievementAdapter);
+            otherInformationAdapter =new OtherInformationAdapter(OtherInformationDetail.this,otherInformationArrayList);
+            otherListView.setAdapter(otherInformationAdapter);
 
         }
         Toast.makeText(this,"Clearing the Project",Toast.LENGTH_SHORT).show();
     }
 
-    private void addAchievementDetail()
+    private void addOtherDetail()
     {
-        if(achievementInformationList.size() > 0)
+        if(otherInformationArrayList.size() > 0)
         {
-            int lastElement=achievementInformationList.size() - 1;
-            AchievementInformation lastAchievementInformation=achievementInformationList.get(lastElement);
-            String achievement_desc=lastAchievementInformation.getAchievement();
+            int lastElement=otherInformationArrayList.size() - 1;
+            OtherInformation lastOtherInformation=otherInformationArrayList.get(lastElement);
+            String other_desc=lastOtherInformation.getOther();
 
-            if(achievement_desc.length() >0)
+            if(other_desc.length() >0)
             {
                 creatingNewElement();
             }
@@ -145,9 +143,9 @@ public class AchievementDetail extends AppCompatActivity {
     }
     private void creatingNewElement()
     {
-        AchievementInformation achievementInformation=new AchievementInformation("");
-        achievementInformationList.add(achievementInformation);
-        achievementAdapter =new AchievementAdapter(AchievementDetail.this,achievementInformationList);
-        achievementListView.setAdapter(achievementAdapter);
+        OtherInformation otherInformation=new OtherInformation("");
+        otherInformationArrayList.add(otherInformation);
+        otherInformationAdapter =new OtherInformationAdapter(OtherInformationDetail.this,otherInformationArrayList);
+        otherListView.setAdapter(otherInformationAdapter);
     }
 }

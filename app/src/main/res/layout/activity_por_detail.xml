@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.dtu_resume.ResumeElement.AchievementDetail">
+    tools:context="com.example.android.dtu_resume.ResumeElement.PorDetail">
 
     <LinearLayout
         android:id="@+id/basic_detail_layout"
@@ -46,7 +46,7 @@
     </LinearLayout>
 
     <ListView
-        android:id="@+id/achievement_list_view"
+        android:id="@+id/por_list_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"

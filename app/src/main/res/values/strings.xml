@@ -122,4 +122,42 @@
     //Key
     <string name="achievement_award_key">Achievement</string>
 
+    /*
+    Positions of Responsibility
+    */
+    // Constant
+    <string name="position_of_responsibility">Positions of Responsibility</string>
+
+    // Hint String
+    <string name="por_title_hint">Head Of External Affairs, Society of Robotics DTU (Aug 2018 – May 2019)</string>
+    <string name="por_description_hint">->Organized Excelsior’18 - Techfest of SR-DTU, having a footfall of more than 5000 people.
+                                            ->Coordinated sponsor events throughout the year.</string>
+
+    //Key
+    <string name="por_key">POR</string>
+
+    /*
+    Extra-Curricular Activity
+    */
+    // Constant
+    <string name="extra_curricular">Extra-Curricular Activities</string>
+
+    // Hint String
+    <string name="extra_curricular_hint">Member, Nrityangana - Dance Society, DTU represented college at Antaragni, the cultural fest of IIT Kanpur</string>
+
+    //Key
+    <string name="extra_curricular_key">Extra-Curricular</string>
+
+    /*
+    Other Information
+    */
+    // Constant
+    <string name="other_information">Other Information</string>
+
+    // Hint String
+    <string name="other_information_hint">Course Completed : Supply Chain Management(DTU), Advanced Excel(University of Michigan, Coursera)</string>
+
+    // Key
+    <string name="other_information_key">Other Information</string>
+
 </resources>
